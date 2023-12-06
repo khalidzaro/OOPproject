@@ -20,6 +20,16 @@ public class Student extends Person {
     public void setMajor(String major) {
         this.major = major;
     }
+
+    @Override
+    public boolean inLoan() {
+        return super.inLoan(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getInfo() {
+        return super.getInfo(); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

@@ -19,6 +19,11 @@ public class Book  implements Display{
     private String Genre;
     private String version;
     private Date date;
+    private Iterable<Loan> loans;
+
+    Book(String NO, String title, String auther, String Genre, String version, String date) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public int getNO() {
         return NO;
@@ -68,6 +73,20 @@ public class Book  implements Display{
         this.date = date;
     }
 
+    public Book() {
+    }
+
+    public Book(int NO, String title, Auther auther, String Genre, String version, Date date) {
+        this.NO = NO;
+        this.title = title;
+        this.auther = auther;
+        this.Genre = Genre;
+        this.version = version;
+        this.date = date;
+    }
+    
+    
+
     @Override
     public String getInfo() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -75,7 +94,13 @@ public class Book  implements Display{
 
     @Override
     public boolean inLoan() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // Assuming you have a Loan class with a method isBookOnLoan
+        for (Loan loan : loans) {
+            if (loan.isBookOnLoan(this)) {
+                return true;
+            }
+        }
+        return false;
     }
     
     

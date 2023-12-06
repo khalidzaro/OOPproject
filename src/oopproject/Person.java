@@ -12,11 +12,15 @@ import java.util.Date;
  */
 
 public class Person implements Display {
+
+    static void add(Auther auther) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private int id;
     private String name;
     private String address;
-    private Date BOD;
+    private DateOfBirth BOD;
 
     public int getId() {
         return id;
@@ -42,14 +46,27 @@ public class Person implements Display {
         this.address = address;
     }
 
-    public Date getBOD() {
+    public DateOfBirth getBOD() {
         return BOD;
     }
 
-    public void setBOD(Date BOD) {
+    public void setBOD(DateOfBirth BOD) {
         this.BOD = BOD;
     }
 
+    public Person() {
+    }
+
+    public Person(int id, String name, String address, DateOfBirth BOD) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.BOD = BOD;
+    }
+
+    
+    
+    
     @Override
     public String getInfo() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
