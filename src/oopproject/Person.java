@@ -14,7 +14,7 @@ import java.util.Date;
 public class Person implements Display {
 
     static void add(Auther auther) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
     
     private int id;
@@ -69,12 +69,12 @@ public class Person implements Display {
     
     @Override
     public String getInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
     public boolean inLoan() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
     

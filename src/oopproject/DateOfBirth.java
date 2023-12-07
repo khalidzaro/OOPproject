@@ -13,7 +13,7 @@ public class DateOfBirth {
         this.day = day;
     }
 
-    // Getters and setters (optional)
+
 
     public int getYear() {
         return year;
@@ -44,7 +44,7 @@ public class DateOfBirth {
         return year + "-" + month + "-" + day;
     }
 
-    // Additional methods (if needed)
+
     
     public LocalDate toLocalDate() {
         return LocalDate.of(year, month, day);

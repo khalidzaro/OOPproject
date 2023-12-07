@@ -42,7 +42,7 @@ public class Loan {
     }
     
     public boolean isBookOnLoan(Book book) {
-        // Implementation for checking if the book is on loan
-        return false;  // Replace with your actual logic
+    
+        return false;  
     }
 }

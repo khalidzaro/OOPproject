@@ -23,12 +23,12 @@ public class Student extends Person {
 
     @Override
     public boolean inLoan() {
-        return super.inLoan(); //To change body of generated methods, choose Tools | Templates.
+        return super.inLoan(); 
     }
 
     @Override
     public String getInfo() {
-        return super.getInfo(); //To change body of generated methods, choose Tools | Templates.
+        return super.getInfo(); 
     }
     
     

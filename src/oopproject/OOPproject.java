@@ -32,7 +32,7 @@ public class OOPproject {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        //Auther A1 = new Auther(1234, "John Doe" ,"123 Main St", new DateOfBirth(1999, 11, 11));
+        
         
          
        authers.add(new Auther(1234, "John Doe" ,"123 Main St", new DateOfBirth(1999, 11, 11)));
@@ -85,11 +85,11 @@ public class OOPproject {
         if (option < 0 || option > 4) {
             throw new InputMismatchException();
         }
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
         return option;
     } catch (InputMismatchException e) {
         System.out.println("Invalid input. Please enter a valid option.");
-        scanner.nextLine(); // Consume the invalid input
+        scanner.nextLine(); 
         return selectOption();
     }
 }
@@ -99,12 +99,12 @@ public class OOPproject {
 
 private static void addBook() {
     System.out.print("Enter book NO: ");
-    int NO = 0;  // Initialize NO as 0
+    int NO = 0; 
     try {
         NO = Integer.parseInt(scanner.nextLine());
     } catch (NumberFormatException e) {
         System.out.println("Invalid input for book NO. Please enter a valid integer.");
-        return;  // Exit the function if input is not a valid integer
+        return;  
     }
 
     System.out.print("Enter book title: ");
@@ -122,14 +122,14 @@ private static void addBook() {
 
     System.out.print("Enter book date: ");
     String dateString = scanner.nextLine();
-    Date date = null;  // Initialize date as null
+    Date date = null;  
     try {
-        // Convert the input string to a Date object using appropriate parsing logic
-        // For simplicity, assuming dateString is a valid format; adjust as needed
+
+    
         date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
     } catch (ParseException e) {
         System.out.println("Invalid date format. Please enter a valid date in the format yyyy-MM-dd.");
-        return;  // Exit the function if date input is not valid
+        return;  
     }
 
     Book book = new Book(NO, title, author, genre, version, date);
@@ -145,8 +145,8 @@ private static void addBook() {
 
     System.out.println("Search Results:");
     for (Book book : books) {
-        String noString = String.valueOf(book.getNO());  // Convert int NO to String for comparison
-        Auther author = book.getAuther();  // Assuming getAuther() returns an Auther object
+        String noString = String.valueOf(book.getNO());  
+        Auther author = book.getAuther(); 
 
         if (book.getTitle().toLowerCase().contains(searchTerm.toLowerCase())
                 || author.getName().toLowerCase().contains(searchTerm.toLowerCase())
@@ -168,17 +168,17 @@ private static void addBook() {
     
 private static void checkBookAvailability() {
     System.out.print("Enter book NO: ");
-    int NO = 0;  // Initialize NO as 0
+    int NO = 0;  
     try {
         NO = Integer.parseInt(scanner.nextLine());
     } catch (NumberFormatException e) {
         System.out.println("Invalid input for book NO. Please enter a valid integer.");
-        return;  // Exit the function if input is not a valid integer
+        return;  
     }
 
     Book book = findBookByNO(NO);
     if (book != null) {
-        if (book.inLoan()) {  // Check if book is in loan only if it's not null
+        if (book.inLoan()) {  
             System.out.println("Book is currently on loan.");
         } else {
             System.out.println("Book is available.");
@@ -195,7 +195,7 @@ private static void checkBookAvailability() {
             return book.getTitle();
         }
     }
-    return "Unknown Title";  // Return a default value if the book is not found
+    return "Unknown Title";  
 }
 
 

@@ -22,7 +22,7 @@ public class Book  implements Display{
     private Iterable<Loan> loans;
 
     Book(String NO, String title, String auther, String Genre, String version, String date) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     public int getNO() {
@@ -89,12 +89,11 @@ public class Book  implements Display{
 
     @Override
     public String getInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
     public boolean inLoan() {
-        // Assuming you have a Loan class with a method isBookOnLoan
         for (Loan loan : loans) {
             if (loan.isBookOnLoan(this)) {
                 return true;

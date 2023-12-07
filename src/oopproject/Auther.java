@@ -20,7 +20,7 @@ public class Auther extends Person {
 
     @Override
     public String getInfo() {
-        return super.getInfo(); //To change body of generated methods, choose Tools | Templates.
+        return super.getInfo(); 
     }
     
     
