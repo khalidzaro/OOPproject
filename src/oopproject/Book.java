@@ -22,7 +22,7 @@ public class Book  implements Display{
     private Iterable<Loan> loans;
 
     Book(String NO, String title, String auther, String Genre, String version, String date) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yetqqqqq."); 
     }
 
     public int getNO() {
